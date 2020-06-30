@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!-- Authentication -->
+    <servlet>
+        <servlet-name>login</servlet-name>
+        <servlet-class>Controller.AuthenticationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>login</servlet-name>
+        <url-pattern>/SignIn</url-pattern>
+    </servlet-mapping>
+
+    <!-- Alertes de besoin -->
+    <servlet>
+        <servlet-name>alertes</servlet-name>
+        <servlet-class>Controller.AlerteBesoin.AlerteBesoinServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>alertes</servlet-name>
+        <url-pattern>/Alertes</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>traiterAlerte</servlet-name>
+        <servlet-class>Controller.AlerteBesoin.TraiterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>traiterAlerte</servlet-name>
+        <url-pattern>/TraiterAlerte</url-pattern>
+    </servlet-mapping>
+
+    <!-- Banques Du Sang-->
+    <servlet>
+    <servlet-name>BanqueDuSang</servlet-name>
+    <servlet-class>Controller.BanqueDuSang.BanqueSangController</servlet-class>
+</servlet>
+    <servlet-mapping>
+        <servlet-name>BanqueDuSang</servlet-name>
+        <url-pattern>/LesBanquesDuSang</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SupprimerBanque</servlet-name>
+        <servlet-class>Controller.BanqueDuSang.SupprimerBanqueController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SupprimerBanque</servlet-name>
+        <url-pattern>/SupprimerBanqueDuSang</url-pattern>
+    </servlet-mapping>
+<!-- Fin banque Du Sang-->
+
+    <!-- Stock Du Sang-->
+    <servlet>
+        <servlet-name>Stock</servlet-name>
+        <servlet-class>Controller.StockController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Stock</servlet-name>
+        <url-pattern>/Statistiques</url-pattern>
+    </servlet-mapping>
+
+    <!--Admin Statistic-->
+    <servlet>
+        <servlet-name>AdminStat</servlet-name>
+        <servlet-class>Controller.AdminStatistics</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminStat</servlet-name>
+        <url-pattern>/AdminStatistiques</url-pattern>
+    </servlet-mapping>
+
+    <!-- Fin Stock Du Sang-->
+
+
+</web-app>
